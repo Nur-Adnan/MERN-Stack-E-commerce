@@ -53,10 +53,12 @@ const App = () => {
     });
   }, []);
 
-  return (
+  return loading ? (
+    <Loader />
+  ) : (
     <Router>
       <Suspense fallback={<Loader />}>
-        <Header />
+        <Header user={user} />
         {/* Header */}
         <Routes>
           <Route path="/" element={<Home />} />
