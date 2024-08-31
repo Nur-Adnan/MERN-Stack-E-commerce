@@ -8,8 +8,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { auth } from "./firebase";
 import { getUser } from "./redux/api/userAPI";
 import { userExist, userNotExist } from "./redux/reducer/userReducer";
-import { RootState } from "./redux/store";
+// import { RootState } from "./redux/store";
 import ProtectedRoute from "./components/admin/protected-route";
+import { UserReducerInitialState } from "./types/reducer-types";
 
 const Home = lazy(() => import("./pages/home"));
 const Search = lazy(() => import("./pages/search"));
@@ -40,7 +41,7 @@ const TransactionManagement = lazy(
 
 const App = () => {
   const { user, loading } = useSelector(
-    (state: RootState) => state.userReducer
+    (state: { userReducer: UserReducerInitialState }) => state.userReducer
   );
 
   const dispatch = useDispatch();
@@ -84,9 +85,13 @@ const App = () => {
           </Route>
           {/* Admin Routes */}
           <Route
-          // element={
-          //     <ProtectedRoute isAuthenticated={true} adminRoute={true} isAdmin={true} />
-          // }
+            element={
+              <ProtectedRoute
+                isAuthenticated={true}
+                adminOnly={true}
+                admin={user?.role === "admin" ? true : false}
+              />
+            }
           >
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/product" element={<Products />} />
