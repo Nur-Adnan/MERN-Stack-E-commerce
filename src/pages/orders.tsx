@@ -9,7 +9,7 @@ type DataType = {
     amount: number;
     quantity: number;
     discount: number;
-    status: ReactElement;
+
     action: ReactElement;
   };
 

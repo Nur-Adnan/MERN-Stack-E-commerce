@@ -8,24 +8,26 @@ import {
 } from "react-icons/fa";
 import { useState } from "react";
 
-const user = {_id: "", role: ""};
+const user = { _id: "", role: "" };
 
 const header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const logoutHandler = () => {
     setIsOpen(false);
-  }
+  };
   return (
     <nav className="header">
-        <Link onClick={() => setIsOpen(false)} to={'/'}>HOME</Link>
-        <Link onClick={() => setIsOpen(false)} to={'/search'}>
-            <FaSearch/>
-        </Link>
-        <Link onClick={() => setIsOpen(false)} to={'/cart'}>
-            <FaShoppingBag/>
-        </Link>
-        {user?._id ? (
+      <Link onClick={() => setIsOpen(false)} to={"/"}>
+        HOME
+      </Link>
+      <Link onClick={() => setIsOpen(false)} to={"/search"}>
+        <FaSearch />
+      </Link>
+      <Link onClick={() => setIsOpen(false)} to={"/cart"}>
+        <FaShoppingBag />
+      </Link>
+      {user?._id ? (
         <>
           <button onClick={() => setIsOpen((prev) => !prev)}>
             <FaUser />
@@ -43,15 +45,16 @@ const header = () => {
               <button onClick={logoutHandler}>
                 <FaSignOutAlt />
               </button>
-              </div>
-              </dialog>
+            </div>
+          </dialog>
         </>
-        ) : <Link to={'/login'}>
-            <FaSignInAlt/>
+      ) : (
+        <Link to={"/login"}>
+          <FaSignInAlt />
         </Link>
-        }
+      )}
     </nav>
-  )
-}
+  );
+};
 
-export default header
+export default header;
