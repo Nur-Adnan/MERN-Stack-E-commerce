@@ -9,7 +9,7 @@ import { auth } from "./firebase";
 import { getUser } from "./redux/api/userAPI";
 import { userExist, userNotExist } from "./redux/reducer/userReducer";
 // import { RootState } from "./redux/store";
-import ProtectedRoute from "./components/admin/protected-route";
+import ProtectedRoute from "./components/protected-route";
 import { UserReducerInitialState } from "./types/reducer-types";
 
 const Home = lazy(() => import("./pages/home"));
