@@ -3,7 +3,7 @@ import { FaTrash } from "react-icons/fa";
 import AdminSidebar from "../../../components/admin/AdminSidebar";
 import { useSelector } from "react-redux";
 import { UserReducerInitialState } from "../../../types/reducer-types";
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import {
   useDeleteProductMutation,
   useProductDetailsQuery,
@@ -17,8 +17,10 @@ const Productmanagement = () => {
   const { user } = useSelector(
     (state: { userReducer: UserReducerInitialState }) => state.userReducer
   );
+
   const params = useParams();
   const navigate = useNavigate();
+
   const { data, isLoading, isError } = useProductDetailsQuery(params.id!);
 
   const { price, photo, name, stock, category } = data?.product || {
@@ -95,6 +97,8 @@ const Productmanagement = () => {
       setCategoryUpdate(data.product.category);
     }
   }, [data]);
+
+  if (isError) return <Navigate to={"/404"} />;
 
   return (
     <div className="admin-container">
