@@ -119,7 +119,7 @@ const Search = () => {
                 price={i.price}
                 stock={i.stock}
                 handler={addToCartHandler}
-                photos={i.photos}
+                photo={i.photo}
               />
             ))}
           </div>

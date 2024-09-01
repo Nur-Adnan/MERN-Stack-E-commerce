@@ -2,7 +2,7 @@ import { FaExpandAlt, FaPlus } from "react-icons/fa";
 import { server } from "../redux/store";
 type ProductsProps = {
   productId: string;
-  photos: string;
+  photo: string;
   name: string;
   price: number;
   stock: number;
@@ -13,14 +13,14 @@ const ProductCard = ({
   productId,
   price,
   name,
-  photos,
+  photo,
   stock,
   handler,
 }: ProductsProps) => {
   return (
     // uploads\ead2a88c-e2ab-4f06-964d-89c2a683dce6.jpg
     <div className="product-card">
-      <img src={`${server}/${photos}`} alt={name} />
+      <img src={`${server}/${photo}`} alt={name} />
       <p>{name}</p>
       <span>$ {price}</span>
       <div>

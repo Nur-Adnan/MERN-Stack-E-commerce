@@ -37,7 +37,7 @@ const home = () => {
                 price={i.price}
                 stock={i.stock}
                 handler={addToCartHandler}
-                photo={i.photos}
+                photo={i.photo}
               />
             ))
           )}

@@ -8,6 +8,9 @@ import { useAllProductsQuery } from "../../redux/api/productAPI";
 import toast from "react-hot-toast";
 import { CustomError } from "../../types/api-types";
 import { Skeleton } from "../../components/loader";
+import { useSelector } from "react-redux";
+import { UserReducerInitialState } from "../../types/reducer-types";
+import { server } from "../../redux/store";
 
 interface DataType {
   photo: ReactElement;
@@ -64,6 +67,10 @@ const columns: Column<DataType>[] = [
 // ];
 
 const Products = () => {
+  const { user } = useSelector(
+    (state: { userReducer: UserReducerInitialState }) => state.userReducer
+  );
+
   const { isLoading, isError, error, data } = useAllProductsQuery(user?._id!);
   const [rows, setRows] = useState<DataType[]>([]);
   if (isError) {
@@ -74,7 +81,7 @@ const Products = () => {
     if (data)
       setRows(
         data.products.map((i) => ({
-          photo: <img src={i.photos?.[0]?.url} />,
+          photo: <img src={`${server}/${i.photo}`} />,
           name: i.name,
           price: i.price,
           stock: i.stock,
