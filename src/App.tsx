@@ -11,7 +11,6 @@ import { userExist, userNotExist } from "./redux/reducer/userReducer";
 // import { RootState } from "./redux/store";
 import ProtectedRoute from "./components/admin/protected-route";
 import { UserReducerInitialState } from "./types/reducer-types";
-import NotFound from "./pages/not-found";
 
 const Home = lazy(() => import("./pages/home"));
 const Search = lazy(() => import("./pages/search"));
@@ -20,6 +19,8 @@ const Shipping = lazy(() => import("./pages/shipping"));
 const Login = lazy(() => import("./pages/login"));
 const Orders = lazy(() => import("./pages/orders"));
 const OrderDetails = lazy(() => import("./pages/order-details"));
+const NotFound = lazy(() => import("./pages/not-found"));
+const Checkout = lazy(() => import("./pages/checkout"));
 
 // Admin Routes importing
 const Dashboard = lazy(() => import("./pages/admin/dashboard"));
@@ -83,6 +84,7 @@ const App = () => {
             <Route path="/shipping" element={<Shipping />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/order/:id" element={<OrderDetails />} />
+            <Route path="/pay" element={<Checkout />} />
           </Route>
           {/* Admin Routes */}
           <Route
