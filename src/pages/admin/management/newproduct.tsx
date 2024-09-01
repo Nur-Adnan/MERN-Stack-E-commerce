@@ -43,7 +43,7 @@ const NewProduct = () => {
     e.preventDefault();
     // setIsLoading(true);
     // try {
-    if (!name || !price || !stock || !category || !photo) return;
+    if (!name || !price || stock < 0 || !category || !photo) return;
 
     // if (!photo.file || photo.file.length === 0) return;
 
