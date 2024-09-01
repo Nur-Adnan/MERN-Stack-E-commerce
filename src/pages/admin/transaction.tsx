@@ -19,34 +19,6 @@ interface DataType {
   action: ReactElement;
 }
 
-const arr: Array<DataType> = [
-  {
-    user: "Charas",
-    amount: 4500,
-    discount: 400,
-    status: <span className="red">Processing</span>,
-    quantity: 3,
-    action: <Link to="/admin/transaction/sajknaskd">Manage</Link>,
-  },
-
-  {
-    user: "Xavirors",
-    amount: 6999,
-    discount: 400,
-    status: <span className="green">Shipped</span>,
-    quantity: 6,
-    action: <Link to="/admin/transaction/sajknaskd">Manage</Link>,
-  },
-  {
-    user: "Xavirors",
-    amount: 6999,
-    discount: 400,
-    status: <span className="purple">Delivered</span>,
-    quantity: 6,
-    action: <Link to="/admin/transaction/sajknaskd">Manage</Link>,
-  },
-];
-
 const columns: Column<DataType>[] = [
   {
     Header: "Avatar",
@@ -79,7 +51,7 @@ const Transaction = () => {
 
   const { isLoading, data, isError, error } = useAllOrdersQuery(user?._id!);
 
-  const [rows, setRows] = useState<DataType[]>(arr);
+  const [rows, setRows] = useState<DataType[]>([]);
 
   if (isError) {
     const err = error as CustomError;

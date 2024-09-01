@@ -104,6 +104,11 @@ const Shipping = () => {
         >
           <option value="">Choose Country</option>
           <option value="bangladesh">Bangladesh</option>
+          <option value="india">India</option>
+          <option value="pakistan">Pakistan</option>
+          <option value="nepal">Nepal</option>
+          <option value="sri-lanka">Sri Lanka</option>
+          <option value="bhutan">Bhutan</option>
         </select>
 
         <input
