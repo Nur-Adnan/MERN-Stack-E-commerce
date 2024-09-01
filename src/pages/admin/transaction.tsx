@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { Column } from "react-table";
 import AdminSidebar from "../../components/admin/AdminSidebar";
 import TableHOC from "../../components/admin/TableHOC";
+import { useSelector } from "react-redux";
+import { RootState } from "@reduxjs/toolkit/query";
+import { useAllOrdersQuery } from "../../redux/api/orderAPI";
 
 interface DataType {
   user: string;
@@ -69,7 +72,16 @@ const columns: Column<DataType>[] = [
 ];
 
 const Transaction = () => {
+  const { user } = useSelector((state: RootState) => state.userReducer);
+
+  const { isLoading, data, isError, error } = useAllOrdersQuery(user?._id!);
+
   const [rows, setRows] = useState<DataType[]>(arr);
+
+  if (isError) {
+    const err = error as CustomError;
+    toast.error(err.data.message);
+  }
 
   const Table = TableHOC<DataType>(
     columns,
