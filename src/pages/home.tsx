@@ -199,7 +199,7 @@ const Home = () => {
                 price={i.price}
                 stock={i.stock}
                 handler={addToCartHandler}
-                photo={i.photo}
+                photos={i.photos}
               />
             ))
           )}

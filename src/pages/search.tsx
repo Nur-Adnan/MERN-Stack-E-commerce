@@ -27,6 +27,7 @@ const Search = () => {
   const [maxPrice, setMaxPrice] = useState(100000);
   const [category, setCategory] = useState(searchQuery.get("category") || "");
   const [page, setPage] = useState(1);
+
   const {
     isLoading: productLoading,
     data: searchedData,
@@ -47,6 +48,7 @@ const Search = () => {
     dispatch(addToCart(cartItem));
     toast.success("Added to cart");
   };
+
   const isPrevPage = page > 1;
   const isNextPage = page < 4;
 
@@ -119,7 +121,7 @@ const Search = () => {
                 price={i.price}
                 stock={i.stock}
                 handler={addToCartHandler}
-                photo={i.photo}
+                photos={i.photos}
               />
             ))}
           </div>

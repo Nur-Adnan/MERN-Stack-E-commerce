@@ -1,48 +1,14 @@
-// import { FaExpandAlt, FaPlus } from "react-icons/fa";
-// import { server } from "../redux/store";
-// import { CartItem } from "../types/types";
-// type ProductsProps = {
-//   productId: string;
-//   photo: string;
-//   name: string;
-//   price: number;
-//   stock: number;
-//   handler: () => void;
-// };
-
-// const ProductCard = ({
-//   productId,
-//   price,
-//   name,
-//   photo,
-//   stock,
-//   handler: (cartItem: CartItem) => string | undefined,
-// }: ProductsProps) => {
-//   return (
-//     // uploads\ead2a88c-e2ab-4f06-964d-89c2a683dce6.jpg
-//     <div className="product-card">
-//       <img src={`${server}/${photo}`} alt={name} />
-//       <p>{name}</p>
-//       <span>$ {price}</span>
-//       <div>
-//         <button onClick={() => handler()}>
-//           <FaPlus />
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ProductCard;
-
 import { FaExpandAlt, FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CartItem } from "../types/types";
-import { server } from "../redux/store";
+import { transformImage } from "../utils/features";
 
 type ProductsProps = {
   productId: string;
-  photo: string;
+  photos: {
+    url: string;
+    public_id: string;
+  }[];
   name: string;
   price: number;
   stock: number;
@@ -53,29 +19,35 @@ const ProductCard = ({
   productId,
   price,
   name,
-  photo,
+  photos,
   stock,
   handler,
 }: ProductsProps) => {
+  const handleAddToCart = () => {
+    const result = handler({
+      productId,
+      price,
+      name,
+      photo: photos[0]?.url || "",
+      stock,
+      quantity: 1,
+    });
+
+    if (result) {
+      console.log(result);
+    } else {
+      console.error("Failed to add item to cart");
+    }
+  };
+
   return (
     <div className="product-card">
-      <img src={`${server}/${photo}`} alt={name} />
+      <img src={transformImage(photos?.[0]?.url, 400)} alt={name} />
       <p>{name}</p>
-      <span>₹{price}</span>
+      <span>${price}</span>
 
       <div>
-        <button
-          onClick={() =>
-            handler({
-              productId,
-              price,
-              name,
-              photo,
-              stock,
-              quantity: 1,
-            })
-          }
-        >
+        <button onClick={handleAddToCart}>
           <FaPlus />
         </button>
 
