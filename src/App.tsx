@@ -11,7 +11,6 @@ import { userExist, userNotExist } from "./redux/reducer/userReducer";
 import { RootState } from "./redux/store";
 import ProtectedRoute from "./components/protected-route";
 import Footer from "./components/footer";
-
 const Home = lazy(() => import("./pages/home"));
 const Search = lazy(() => import("./pages/search"));
 const ProductDetails = lazy(() => import("./pages/product-details"));
