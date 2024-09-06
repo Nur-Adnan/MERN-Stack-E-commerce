@@ -10,7 +10,6 @@ import { CustomError } from "../../types/api-types";
 import { Skeleton } from "../../components/loader";
 import { useSelector } from "react-redux";
 import { UserReducerInitialState } from "../../types/reducer-types";
-import { server } from "../../redux/store";
 
 interface DataType {
   photo: ReactElement;
