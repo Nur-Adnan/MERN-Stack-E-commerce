@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/c6e3d263-aa63-4bf9-9d9b-c929c3d8d64d)# E-Commerce Web Application
+# E-Commerce Web Application
 
 A comprehensive e-commerce platform built with modern web technologies to provide users with a seamless online shopping experience. The application is designed with a feature-rich front-end and a robust admin panel, enabling efficient management of the entire store.
 
@@ -104,6 +104,7 @@ A comprehensive e-commerce platform built with modern web technologies to provid
 ## Screenshots
 
 ![image](https://github.com/user-attachments/assets/6614090a-e193-4878-94b5-f6e4818e871b)
+![image](https://github.com/user-attachments/assets/c6e3d263-aa63-4bf9-9d9b-c929c3d8d64d)
 ![image](https://github.com/user-attachments/assets/8e0d524f-5397-44d3-bb28-37e923e6298c)
 ![image](https://github.com/user-attachments/assets/f894503c-c50c-4921-90e8-5d73be667c57)
 ![image](https://github.com/user-attachments/assets/c674fa01-775d-4b84-b8ae-4f046af58f03)
