@@ -103,6 +103,7 @@ A comprehensive e-commerce platform built with modern web technologies to provid
 
 ## Screenshots
 
+![image](https://github.com/user-attachments/assets/6614090a-e193-4878-94b5-f6e4818e871b)
 ![image](https://github.com/user-attachments/assets/8e0d524f-5397-44d3-bb28-37e923e6298c)
 ![image](https://github.com/user-attachments/assets/f894503c-c50c-4921-90e8-5d73be667c57)
 ![image](https://github.com/user-attachments/assets/c674fa01-775d-4b84-b8ae-4f046af58f03)
@@ -112,7 +113,6 @@ A comprehensive e-commerce platform built with modern web technologies to provid
 ![image](https://github.com/user-attachments/assets/f88ec362-14e2-43ef-b43f-9e333b381a7b)
 ![image](https://github.com/user-attachments/assets/9b9e36a0-5530-4f2f-a984-ae886cf1d284)
 ![image](https://github.com/user-attachments/assets/64f5e816-fa64-47d2-9c6f-6009937b9111)
-![image](https://github.com/user-attachments/assets/6614090a-e193-4878-94b5-f6e4818e871b)
 
 ## License
 
