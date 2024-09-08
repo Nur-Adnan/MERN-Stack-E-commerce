@@ -102,7 +102,7 @@ A comprehensive e-commerce platform built with modern web technologies to provid
 6. The application will be available at `http://localhost:5173`.
 
 ## Screenshots
-
+### User
 ![image](https://github.com/user-attachments/assets/6614090a-e193-4878-94b5-f6e4818e871b)
 ![image](https://github.com/user-attachments/assets/c6e3d263-aa63-4bf9-9d9b-c929c3d8d64d)
 ![image](https://github.com/user-attachments/assets/8e0d524f-5397-44d3-bb28-37e923e6298c)
@@ -114,6 +114,8 @@ A comprehensive e-commerce platform built with modern web technologies to provid
 ![image](https://github.com/user-attachments/assets/f88ec362-14e2-43ef-b43f-9e333b381a7b)
 ![image](https://github.com/user-attachments/assets/9b9e36a0-5530-4f2f-a984-ae886cf1d284)
 ![image](https://github.com/user-attachments/assets/64f5e816-fa64-47d2-9c6f-6009937b9111)
+
+### Admin
 
 ## License
 
