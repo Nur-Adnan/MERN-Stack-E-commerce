@@ -5,11 +5,15 @@ A comprehensive e-commerce platform built with modern web technologies to provid
 ## Table of Contents
 
 - [Features](#features)
+  - [User Features](#user-features)
+  - [Admin Features](#admin-features)
 - [Tech Stack](#tech-stack)
 - [Setup and Installation](#setup-and-installation)
-- [User Functionality](#user-functionality)
-- [Admin Panel](#admin-panel)
-- [Performance Optimizations](#performance-optimizations)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Screenshots](#screenshots)
+  - [User](#user)
+  - [Admin](#admin)
 - [License](#license)
 
 ## Features
@@ -48,6 +52,8 @@ A comprehensive e-commerce platform built with modern web technologies to provid
 - **Authentication:**
   - Google OAuth
  
+## Setup and Installation
+
 ### Prerequisites
 - Node.js and npm installed
 - MongoDB running locally or on a remote server
@@ -102,6 +108,7 @@ A comprehensive e-commerce platform built with modern web technologies to provid
 6. The application will be available at `http://localhost:5173`.
 
 ## Screenshots
+
 ### User
 ![image](https://github.com/user-attachments/assets/6614090a-e193-4878-94b5-f6e4818e871b)
 ![image](https://github.com/user-attachments/assets/c6e3d263-aa63-4bf9-9d9b-c929c3d8d64d)
@@ -123,7 +130,11 @@ A comprehensive e-commerce platform built with modern web technologies to provid
 ![image](https://github.com/user-attachments/assets/e28052a1-f540-4043-a874-3aff5d4f7aee)
 ![image](https://github.com/user-attachments/assets/80cac13c-8d67-4b71-beda-3b0582d8da06)
 ![image](https://github.com/user-attachments/assets/c9c099b5-61e7-4606-b1cb-afb5e9fbbe79)
-
+![image](https://github.com/user-attachments/assets/2ac1a75e-64e9-4629-bcb3-73a06e97a264)
+![image](https://github.com/user-attachments/assets/be485917-cd85-467a-9f26-2ff187059e6e)
+![image](https://github.com/user-attachments/assets/86fa329f-938c-45ed-a0fe-d4e543731e58)
+![image](https://github.com/user-attachments/assets/2c99f19f-d9cf-4a83-8f16-30b56deb862f)
+![image](https://github.com/user-attachments/assets/aee29033-4c42-4605-ab5d-7d8690c04a38)
 
 ## License
 
